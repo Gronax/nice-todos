@@ -18,18 +18,23 @@ const AddTodo = ({ dispatch }) => {
         input.value = ''
       }
     }>
-      <Grid container>
-        <Grid item xs={10} md={9}>
+      <Grid container
+        spacing={2}
+        direction="row"
+        alignItems="center"
+      >
+        <Grid item xs={12} sm={9}>
           <TextField
             label="Add a Todo"
             variant="outlined"
             size="small"
             margin="dense"
+            fullWidth
             inputRef={node => input = node}
           />
         </Grid>
-        <Grid item xs={2} md={3}>
-          <Button variant="contained" color="secondary" type="submit">
+        <Grid item xs={12} sm={3}>
+          <Button variant="contained" color="secondary" type="submit" fullWidth>
             Add Todo
           </Button>
         </Grid>

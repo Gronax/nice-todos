@@ -27,7 +27,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="sm">
-        <Paper elevation={1} style={{ margin: 16 }}>
+        <Paper elevation={1} style={{ marginTop: 16 }}>
           <Typography variant="h4" style={{ padding: 16 }}>Nice Todo's</Typography>
           <Divider />
           <AddTodo />
