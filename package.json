@@ -39,14 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Gronax/nice-todos.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Gronax/nice-todos/issues"
-  },
-  "homepage": "https://github.com/Gronax/nice-todos#readme"
+  }
 }
