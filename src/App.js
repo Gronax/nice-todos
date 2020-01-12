@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React from 'react'
+import Filter from './components/Filter'
+import AddTodo from './containers/AddTodo'
+import VisibleTodoList from './containers/VisibleTodoList'
+import { Container, Paper, Typography, Divider } from '@material-ui/core'
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
-function App() {
+const App = () => {
+  const theme = createMuiTheme({
+    palette: {
+      type: 'light',
+      primary: {
+        light: "#795DCC",
+        main: '#5D3EBC',
+        dark: "#431FB0",
+        contrastText: "#FFD10D"
+      },
+      secondary: {
+        light: "#FFE269",
+        main: '#FFD10D',
+        dark: "#FFDA40",
+        contrastText: "#5D3EBC"
+      }
+    }
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <Container maxWidth="sm">
+        <Paper elevation={1} style={{ margin: 16 }}>
+          <Typography variant="h4" style={{ padding: 16 }}>Nice Todo's</Typography>
+          <Divider />
+          <AddTodo />
+          <Divider />
+          <Filter />
+          <Divider />
+          <VisibleTodoList />
+        </Paper>
+      </Container>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
